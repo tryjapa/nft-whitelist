@@ -4,7 +4,7 @@ import styles from './index.module.css'
 
 
 const WhiteList = () => {
-    const [counter, setCounter] = React.useState(71640);
+    const [counter, setCounter] = React.useState(71140);
     React.useEffect(() => {
         counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
       }, [counter]);
