@@ -17,3 +17,12 @@
     background-blend-mode: darken, luminosity;
    
 }
+
+@media(max-width:700px){
+    .white-list-img{
+        height: 50%;
+        width: 50%;
+        background-blend-mode: darken, luminosity;
+       
+    }
+}
