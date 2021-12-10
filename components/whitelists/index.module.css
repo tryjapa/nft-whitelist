@@ -12,17 +12,21 @@
     font-size: 1.5rem;
 }
 .white-list-img{
-    height: 30%;
-    width: 30%;
-    background-blend-mode: darken, luminosity;
-   
+    height: 35%;
+    width: 35%;  
 }
 
-@media(max-width:700px){
+@media(max-width:900px){
     .white-list-img{
-        height: 50%;
-        width: 50%;
-        background-blend-mode: darken, luminosity;
+        height: 50% ;
+        width: 50% ;       
+       
+    }
+}
+@media(max-width:600px){
+    .white-list-img{
+        height: 75% ;
+        width: 75% ;       
        
     }
 }
