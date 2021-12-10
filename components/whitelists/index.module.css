@@ -1,0 +1,19 @@
+.container-white-list{
+    position: relative;
+    z-index: 16;
+}
+.box-white-list, .box-white-list h3 {
+    font-family: OdibeeSans ;
+    color: rgb(241, 245, 30);
+    text-align: center;
+}
+.box-white-list p{
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+.white-list-img{
+    height: 30%;
+    width: 30%;
+    background-blend-mode: darken, luminosity;
+   
+}
