@@ -1,84 +1,70 @@
-@keyframes moveWave {
-  0% {
-      transform: translateX(0) translateZ(0) scaleY(1)
-  }
-  50% {
-      transform: translateX(-25%) translateZ(0) scaleY(0.55)
-  }
-  100% {
-      transform: translateX(-50%) translateZ(0) scaleY(1)
-  }
-}
+
 @font-face {
   font-family: 'OdibeeSans';
   src: local('OdibeeSans'), url(../assets/OdibeeSans-Regular.ttf) format('truetype');
 }
-.waveWrapper {
-  overflow: hidden;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  margin: auto;
+.container{
+  display: grid;
+  grid-template: 152px 40px auto 100px /repeat(12,1fr);
+  grid-template-areas: 
+  ". . h h h h h h h h . ."
+  ". . n n n n n n n n . ."
+  ". . c c c c c c c c . ."  
+  ". . f f f f f f f f . .";
+ 
 }
-.waveWrapperInner {
-  position: absolute;
-  width: 100%;
-  overflow: hidden;
-  height: 100%;
-  bottom: -1px;
-  background-image: linear-gradient(to top, #8077d1 20%, #5a6ae4 80%);
+
+.header{
+  grid-area: h;
+  
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  background-color: #161616;
+  
 }
-.bgTop {
-  z-index: 15;
-  opacity: 0.5;
+.filters{
+  filter: invert(100%) sepia(2%) saturate(258%) hue-rotate(353deg) brightness(113%) contrast(83%);
 }
-.bgMiddle {
-  z-index: 10;
-  opacity: 0.75;
+
+.adsHeader{
+  align-self: center;
 }
-.bgBottom {
-  z-index: 5;
+.adsHeader div{
+  display: flex;
+  flex-direction: row;
+  align-self:center;
+  justify-self: center;
 }
-.wave {
-  position: absolute;
-  left: 0;
-  width: 200%;
-  height: 100%;
-  background-repeat: repeat no-repeat;
-  background-position: 0 bottom;
-  transform-origin: center bottom;
+.navBar{
+  grid-area: n;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: 'OdibeeSans';
+  background-color: #4158D0;
+background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+color: white;
+font-size: 1.5em;
+
 }
-.waveTop {
-  background-size: 50% 100px;
-  background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')
+
+.content {
+  grid-area: c;
+  border: 1px solid black;
 }
-.waveAnimation .waveTop {
-animation: moveWave 3s;
- -webkit-animation: moveWave 3s;
- -webkit-animation-delay: 1s;
- animation-delay: 1s;
+
+.footer{
+  grid-column:f;
+  border: 1px solid black;
 }
-.waveMiddle {
-  background-size: 50% 120px;
-  background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')
-}
-.waveAnimation .waveMiddle {
-  animation: moveWave 10s linear infinite;
-  background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')
-}
-.waveBottom {
-  background-size: 50% 100px;
-}
-.waveAnimation .waveBottom {
-  animation: moveWave 15s linear infinite;
-}
+
 
 .text-floating-h1{
 position: relative;
 z-index: 16;
-color: #ffffff;
+color: #1994c0;
 text-align: center;
 font-family: OdibeeSans;
 font-size: 2.8em !important
@@ -86,7 +72,7 @@ font-size: 2.8em !important
 .text-floating-h2{
   position: relative;
   z-index: 17;
-  color: #ffffff;
+  color: #1834a5;
   font-family: OdibeeSans;
   font-size: 2.2em !important;
   text-align: center;
